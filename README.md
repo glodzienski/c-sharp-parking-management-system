@@ -1,4 +1,4 @@
-# parking
+# parking system
 Sistema de gerenciamento de estacionamento
 
 O sistema será programado usando C#.
@@ -10,6 +10,7 @@ A idéia é um sistema de gerenciamento de estacionamento, com:
 - Cadastro de Serviços (Estacionar, Lava Car, Mecanina, Revisão tipo isso)
 - Cadastro de Pacotes (Vários serviços)
 - Cadastro de comanda, onde é executado o serviço ou pacote para clientes ou não clientes.
+- Cadastro de Vaga
 
 Classes:
 - UsuarioTipo (Funcionario, Cliente, Admin)
