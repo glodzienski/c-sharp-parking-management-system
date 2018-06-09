@@ -1,20 +1,20 @@
-﻿using Modelos;
+﻿using System;
 using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
 
 namespace Controllers.Base
 {
-    interface IBaseController<T> where T : class
+    interface IBaseController<Model>
     {
-        void Adicionar(T entity);
-        IList<T> ListarTodos();
+        void Store(Model obj);
 
-        IList<T> ListarPorNome(string nome);
+        void Edit(Model obj);
 
-        T BuscarPorID(int id);
-
-        void Editar(T entity);
-
-        void Excluir(int id);
-
+        void Delete(Model obj);
+        Model FindById(int id);
+        IList<Model> List();
+        IList<Model> ListByName(string name);
     }
 }
