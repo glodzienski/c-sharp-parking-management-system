@@ -47,10 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Atividade.cs" />
-    <Compile Include="Categoria.cs" />
-    <Compile Include="Usuario.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Comanda.cs" />
+    <Compile Include="ComandaItem.cs" />
+    <Compile Include="ComandaStatus.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Pacote.cs" />
+    <Compile Include="PacoteServico.cs" />
+    <Compile Include="Servico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UsuarioTipo.cs" />
+    <Compile Include="Vaga.cs" />
+    <Compile Include="VagaTipo.cs" />
+    <Compile Include="Veiculo.cs" />
+    <Compile Include="VeiculoTipo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
