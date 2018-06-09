@@ -4,11 +4,11 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{C303161E-C8E8-4B98-A664-E36B7E953D47}</ProjectGuid>
+    <ProjectGuid>{C74AD50B-5670-4EA5-9586-15DBB7765465}</ProjectGuid>
     <OutputType>Library</OutputType>
     <AppDesignerFolder>Properties</AppDesignerFolder>
-    <RootNamespace>Controllers</RootNamespace>
-    <AssemblyName>Controllers</AssemblyName>
+    <RootNamespace>Modelos</RootNamespace>
+    <AssemblyName>Modelos</AssemblyName>
     <TargetFrameworkVersion>v4.6.1</TargetFrameworkVersion>
     <FileAlignment>512</FileAlignment>
   </PropertyGroup>
@@ -47,17 +47,20 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Base\BaseController.cs" />
-    <Compile Include="Base\IBaseController.cs" />
-    <Compile Include="DAL\Contexto.cs" />
-    <Compile Include="UsuariosController.cs" />
+    <Compile Include="Cliente.cs" />
+    <Compile Include="Comanda.cs" />
+    <Compile Include="ComandaItem.cs" />
+    <Compile Include="ComandaStatus.cs" />
+    <Compile Include="Funcionario.cs" />
+    <Compile Include="Pacote.cs" />
+    <Compile Include="PacoteServico.cs" />
+    <Compile Include="Servico.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-  </ItemGroup>
-  <ItemGroup>
-    <ProjectReference Include="..\Modelos\Models.csproj">
-      <Project>{c74ad50b-5670-4ea5-9586-15dbb7765465}</Project>
-      <Name>Models</Name>
-    </ProjectReference>
+    <Compile Include="UsuarioTipo.cs" />
+    <Compile Include="Vaga.cs" />
+    <Compile Include="VagaTipo.cs" />
+    <Compile Include="Veiculo.cs" />
+    <Compile Include="VeiculoTipo.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
