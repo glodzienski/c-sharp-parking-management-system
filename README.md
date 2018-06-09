@@ -12,26 +12,15 @@ A idéia é um sistema de gerenciamento de estacionamento, com:
 - Cadastro de comanda, onde é executado o serviço ou pacote para clientes ou não clientes.
 
 Classes:
+- UsuarioTipo (Funcionario, Cliente, Admin)
 - Usuario
-- Funcionario extends Usuario
-- Cliente extends Usuario
 - Servico
 - Pacote
+- PacoteServico
+- VeiculoTipo (Bicicleta, Ciclomotor, Motoneta, Motocicleta, Triciclo, Quadriciclo, Automóvel, Microônibus, Onibus, Charrete, Caminhão, Automobilístico, Trator, Especial, Coleção) 
 - Veiculo
-- Bicicleta extends Veiculo
-- Ciclomotor extends Veiculo
-- Motoneta extends Veiculo
-- Motocicleta extends Veiculo
-- Triciclo extends Veiculo
-- Quadriciclo extends Veiculo
-- Automóvel extends Veiculo
-- Microônibus extends Veiculo
-- Ônibus extends Veiculo
-- Charrete extends Veiculo
-- Caminhão extends Veiculo
-- Automobilístico extends Veiculo
-- Trator extends Veiculo
-- Especial extends Veiculo
-- Coleção extends Veiculo
+- ComandaStatus (Reservada, Ativa, Fechada)
+- ComandaItem
 - Comanda
+- VagaTipo
 - Vaga
