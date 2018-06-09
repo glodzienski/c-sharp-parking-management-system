@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class Vaga
+    class Vaga : Model
     {
         public int VagaID { get; set; }
 

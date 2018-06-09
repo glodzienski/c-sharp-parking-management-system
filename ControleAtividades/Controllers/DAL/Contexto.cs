@@ -3,7 +3,7 @@ using System.Data.Entity;
 
 namespace Controllers.DAL
 {
-    class Contexto : DbContext
+    class Contexto : Context
     {
         public Contexto() : base("strConn")
         {

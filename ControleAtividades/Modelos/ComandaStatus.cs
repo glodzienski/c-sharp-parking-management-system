@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class ComandaStatus
+    class ComandaStatus : Model
     {
         public int ComandaStatusID { get; set; }
 

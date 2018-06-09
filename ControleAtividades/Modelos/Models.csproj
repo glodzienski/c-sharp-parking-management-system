@@ -52,6 +52,7 @@
     <Compile Include="ComandaItem.cs" />
     <Compile Include="ComandaStatus.cs" />
     <Compile Include="Funcionario.cs" />
+    <Compile Include="Model.cs" />
     <Compile Include="Pacote.cs" />
     <Compile Include="PacoteServico.cs" />
     <Compile Include="Servico.cs" />

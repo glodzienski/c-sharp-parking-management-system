@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Modelos
 {
-    class Pacote
+    class Pacote : Model
     {
         public int PacoteID { get; set; }
 
