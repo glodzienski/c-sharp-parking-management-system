@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class VagaTipo : Model
+    public class VagaTipo : Model
     {
         public int VagaTipoID { get; set; }
 

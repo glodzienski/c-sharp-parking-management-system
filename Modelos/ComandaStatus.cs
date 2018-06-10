@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class ComandaStatus : Model
+    public class ComandaStatus : Model
     {
         public int ComandaStatusID { get; set; }
 

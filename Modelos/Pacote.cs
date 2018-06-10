@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class Pacote : Model
+    public class Pacote : Model
     {
         public int PacoteID { get; set; }
 

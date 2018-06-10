@@ -4,9 +4,9 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class Funcionario : Model
+    public class Funcionario : Model
     {
         public int FuncionarioID { get; set; }
 
@@ -24,6 +24,6 @@ namespace Modelos
 
         public int UsuarioTipoID { get; set; }
 
-        public virtual UsuarioTipo _UsuarioTipo { get; set; }
+        public bool Administrador { get; set; }
     }
 }
