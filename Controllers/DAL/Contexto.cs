@@ -9,6 +9,7 @@ namespace Controllers.DAL
         {
 
         }
+
         public DbSet<ComandaItem> ComandaItem { get; set; }
 
         public DbSet<ComandaStatus> ComandaStatus { get; set; }
