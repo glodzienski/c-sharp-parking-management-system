@@ -17,6 +17,8 @@ namespace StartBD
             ComandaStatusSeeder.Run();
             Console.WriteLine("Populando tabela VagaTipo");
             VagaTipoSeeder.Run();
+            Console.WriteLine("Populando tabela Funcionario");
+            FuncionarioSeeder.Run();
             Console.WriteLine("Data base populada com sucesso.");
             Console.ReadKey();
         }

@@ -21,7 +21,7 @@ namespace Models
 
         public bool Ativo { get; set; }
 
-        public int Cpf { get; set; }
+        public long Cpf { get; set; }
 
         [DefaultValue(false)]
         public bool Administrador { get; set; }
