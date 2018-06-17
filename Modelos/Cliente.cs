@@ -19,7 +19,5 @@ namespace Models
         public bool Ativo { get; set; }
 
         public int Cpf { get; set; }
-
-        public int UsuarioTipoID { get; set; }
     }
 }

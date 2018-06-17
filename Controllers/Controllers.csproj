@@ -50,6 +50,8 @@
     <Compile Include="Base\BaseController.cs" />
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="ComandaController.cs" />
+    <Compile Include="ComandaStatusController.cs" />
+    <Compile Include="VagaTipoController.cs" />
     <Compile Include="VeiculoTipoController.cs" />
     <Compile Include="VagaController.cs" />
     <Compile Include="PacoteController.cs" />

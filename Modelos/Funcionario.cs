@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -22,8 +23,7 @@ namespace Models
 
         public int Cpf { get; set; }
 
-        public int UsuarioTipoID { get; set; }
-
+        [DefaultValue(false)]
         public bool Administrador { get; set; }
     }
 }

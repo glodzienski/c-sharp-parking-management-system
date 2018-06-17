@@ -10,7 +10,15 @@ namespace StartBD
     {
         static void Main(string[] args)
         {
+            Console.WriteLine("Iniciando start pack data base");
+            Console.WriteLine("Populando tabela VeiculoTipo");
             VeiculoTipoSeeder.Run();
+            Console.WriteLine("Populando tabela ComandaStatus");
+            ComandaStatusSeeder.Run();
+            Console.WriteLine("Populando tabela VagaTipo");
+            VagaTipoSeeder.Run();
+            Console.WriteLine("Data base populada com sucesso.");
+            Console.ReadKey();
         }
     }
 }
