@@ -49,8 +49,13 @@
   <ItemGroup>
     <Compile Include="Base\BaseController.cs" />
     <Compile Include="Base\IBaseController.cs" />
+    <Compile Include="ComandaController.cs" />
+    <Compile Include="VagaController.cs" />
+    <Compile Include="PacoteController.cs" />
+    <Compile Include="ServicoController.cs" />
     <Compile Include="DAL\Contexto.cs" />
-    <Compile Include="UsuariosController.cs" />
+    <Compile Include="ClienteController.cs" />
+    <Compile Include="FuncionarioController.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

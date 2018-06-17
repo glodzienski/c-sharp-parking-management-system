@@ -13,8 +13,11 @@ namespace Controllers.Base
         void Edit(Model obj);
 
         void Delete(Model obj);
+
         Model FindById(int id);
+
         IList<Model> List();
-        IList<Model> ListByName(string name);
+
+        //IList<Model> ListByName(string name);
     }
 }

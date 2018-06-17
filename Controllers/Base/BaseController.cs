@@ -1,4 +1,4 @@
-﻿using Modelos;
+﻿using Models;
 using System;
 using System.Collections.Generic;
 using System.Linq;
@@ -16,8 +16,6 @@ namespace Controllers.Base
         }
 
         public Model Entitie { get; set; }
-
-        public IList<Model> List { get; set; }
 
         public void Delete(Model obj)
         {

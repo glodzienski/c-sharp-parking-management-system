@@ -17,7 +17,7 @@ namespace Controllers.DAL
 
         public DbSet<Cliente> Cliente { get; set; }
 
-        public DbSet<Cliente> Funcionario { get; set; }
+        public DbSet<Funcionario> Funcionario { get; set; }
 
         public DbSet<Servico> Servico { get; set; }
 
