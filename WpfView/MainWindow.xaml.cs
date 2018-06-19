@@ -15,9 +15,6 @@ using System.Windows.Shapes;
 
 namespace WpfView
 {
-    /// <summary>
-    /// Interação lógica para MainWindow.xam
-    /// </summary>
     public partial class MainWindow : Window
     {
         public MainWindow()
@@ -44,9 +41,9 @@ namespace WpfView
 
         private void btnCarregarCadastroUsuario_Click(object sender, RoutedEventArgs e)
         {
-            frmUsuario cadUsu = new frmUsuario();
-            //cadUsu.Show();
-            cadUsu.ShowDialog();
+            frmSystem frm = new frmSystem();
+            frm.ShowDialog();
+            //frm.ShowDialog();
         }
     }
 }

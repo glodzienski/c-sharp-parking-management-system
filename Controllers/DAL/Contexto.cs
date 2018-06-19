@@ -7,7 +7,14 @@ namespace Controllers.DAL
     {
         public Contexto() : base("strConn")
         {
+            // Se não existir a base, cria
+            //Database.SetInitializer(new CreateDatabaseIfNotExists<Contexto>());
 
+            // Apaga e recria 
+            //Database.SetInitializer(new DropCreateDatabaseAlways<Contexto>());
+
+            // Apaga e recria a base de dados cada vez que houver alteração nas model
+            Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
         }
 
         public DbSet<ComandaItem> ComandaItem { get; set; }
