@@ -13,7 +13,6 @@ A idéia é um sistema de gerenciamento de estacionamento, com:
 - Cadastro de Vaga
 
 Classes:
-- UsuarioTipo (Funcionario, Cliente, Admin)
 - Usuario
 - Servico
 - Pacote
@@ -23,5 +22,5 @@ Classes:
 - ComandaStatus (Reservada, Ativa, Fechada)
 - ComandaItem
 - Comanda
-- VagaTipo
+- VagaTipo (Pequena, Média, Grande, Extra Grande)
 - Vaga
