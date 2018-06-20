@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Models
 {
-    public class Cliente : Model
+    public class Cliente : Model 
     {
         public int ClienteID { get; set; }
 
@@ -18,6 +18,6 @@ namespace Models
 
         public bool Ativo { get; set; }
 
-        public int Cpf { get; set; }
+        public long Cpf { get; set; }
     }
 }

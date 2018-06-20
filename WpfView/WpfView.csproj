@@ -61,6 +61,21 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="telas\screenClientes.xaml.cs">
+      <DependentUpon>screenClientes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\screenFuncionarios.xaml.cs">
+      <DependentUpon>screenFuncionarios.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\screenPacotes.xaml.cs">
+      <DependentUpon>screenPacotes.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\screenServicos.xaml.cs">
+      <DependentUpon>screenServicos.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\screenVagas.xaml.cs">
+      <DependentUpon>screenVagas.xaml</DependentUpon>
+    </Compile>
     <Page Include="frmSystem.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -80,6 +95,26 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="telas\screenClientes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="telas\screenFuncionarios.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="telas\screenPacotes.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="telas\screenServicos.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="telas\screenVagas.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Properties\AssemblyInfo.cs">
@@ -115,7 +150,14 @@
     <Resource Include="users.png" />
   </ItemGroup>
   <ItemGroup>
-    <Folder Include="Cliente\" />
+    <ProjectReference Include="..\Controllers\Controllers.csproj">
+      <Project>{C303161E-C8E8-4B98-A664-E36B7E953D47}</Project>
+      <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Modelos\Models.csproj">
+      <Project>{C74AD50B-5670-4EA5-9586-15DBB7765465}</Project>
+      <Name>Models</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

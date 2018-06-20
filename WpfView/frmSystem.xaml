@@ -1,9 +1,10 @@
-﻿<Window x:Class="WpfView.frmSystem"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
+        xmlns:telas="clr-namespace:WpfView.telas" x:Class="WpfView.frmSystem"
         mc:Ignorable="d"
         Title="Cadastro de Cliente" Height="512" Width="943" WindowStartupLocation="CenterOwner" Background="#FF8B8B8B" WindowState="Maximized">
     <Grid Margin="0" Grid.IsSharedSizeScope="True">
@@ -57,7 +58,7 @@
                         <ColumnDefinition Width="15"/>
                         <ColumnDefinition Width="897*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Cliente" Grid.ColumnSpan="3" Margin="0,0,-75,-100"/>
+                    <telas:screenClientes Grid.ColumnSpan="3" Margin="0,0,-100,-100"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabFuncionarios" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE4E4E4">
@@ -67,7 +68,7 @@
                         <ColumnDefinition Width="15"/>
                         <ColumnDefinition Width="897*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Funcionario" Grid.ColumnSpan="3" Margin="0,0,-75,-100"/>
+                    <telas:screenFuncionarios Grid.ColumnSpan="3" Margin="0,0,819,294"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabVagas" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">
@@ -77,7 +78,7 @@
                         <ColumnDefinition Width="15"/>
                         <ColumnDefinition Width="897*"/>
                     </Grid.ColumnDefinitions>
-                    <Button Content="Vagas" Grid.ColumnSpan="3" Margin="0,0,-75,-100"/>
+                    <telas:screenVagas Grid.ColumnSpan="3" Margin="0,0,819,294"/>
                 </Grid>
             </TabItem>
         </TabControl>

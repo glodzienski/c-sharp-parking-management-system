@@ -9,7 +9,7 @@ namespace Controllers.Migrations
     {
         public Configuration()
         {
-            AutomaticMigrationsEnabled = false;
+            AutomaticMigrationsEnabled = true;
             ContextKey = "Controllers.DAL.Contexto";
         }
 

@@ -51,10 +51,6 @@
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="ComandaController.cs" />
     <Compile Include="ComandaStatusController.cs" />
-    <Compile Include="Migrations\201806172255540_InitialCreate.cs" />
-    <Compile Include="Migrations\201806172255540_InitialCreate.Designer.cs">
-      <DependentUpon>201806172255540_InitialCreate.cs</DependentUpon>
-    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VagaTipoController.cs" />
     <Compile Include="VeiculoTipoController.cs" />
@@ -75,11 +71,6 @@
       <Project>{c74ad50b-5670-4ea5-9586-15dbb7765465}</Project>
       <Name>Models</Name>
     </ProjectReference>
-  </ItemGroup>
-  <ItemGroup>
-    <EmbeddedResource Include="Migrations\201806172255540_InitialCreate.resx">
-      <DependentUpon>201806172255540_InitialCreate.cs</DependentUpon>
-    </EmbeddedResource>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
