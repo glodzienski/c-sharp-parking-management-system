@@ -1,18 +1,49 @@
-﻿<Window x:Class="WpfView.MainWindow"
+﻿<Window
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:WpfView"
+        xmlns:telas="clr-namespace:WpfView.telas" x:Name="formLogin" x:Class="WpfView.MainWindow"
         mc:Ignorable="d"
-        Title="Tela Principal" Height="450" Width="800" Background="#FF86ABF9">
+        Title="Tela Principal" Height="450" Width="800" Background="#FF86ABF9" WindowStartupLocation="CenterScreen" WindowState="Maximized">
     <Grid>
-        <Button x:Name="btnCliqueMe" Width="300px" Height="100" Content="Clique-me" Margin="10,10,482,309" Click="btnCliqueMe_Click" />
-        <CheckBox Content="CheckBox" HorizontalAlignment="Left" Margin="10,133,0,0" VerticalAlignment="Top" IsChecked="True" Checked="CheckBox_Checked" Unchecked="CheckBox_Unchecked"/>
-        <ComboBox HorizontalAlignment="Left" Margin="190,133,0,0" VerticalAlignment="Top" Width="120"/>
-        <RadioButton Content="RadioButton" HorizontalAlignment="Left" Margin="10,174,0,0" VerticalAlignment="Top"/>
-        <TextBlock HorizontalAlignment="Left" Margin="32,208,0,0" TextWrapping="Wrap" Text="TextBlock" VerticalAlignment="Top"/>
-        <TextBox x:Name="txtNome" HorizontalAlignment="Left" Height="23" Margin="190,194,0,0" TextWrapping="Wrap" Text="Digite seu nome" VerticalAlignment="Top" Width="120"/>
-        <Button x:Name="btnCarregarCadastroUsuario" Content="Abrir cadastro usuario" HorizontalAlignment="Left" Margin="526,133,0,0" VerticalAlignment="Top" Width="215" Height="61" Click="btnCarregarCadastroUsuario_Click"/>
+        <StackPanel x:Name="pnlMenu" Margin="0,0,-143,0" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="40" VerticalAlignment="Top" Background="#FF1B1B1B">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Canvas Margin="0" Height="10" VerticalAlignment="Top">
+                <Grid Height="40" Width="759">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="178*"/>
+                        <ColumnDefinition Width="75*"/>
+                    </Grid.ColumnDefinitions>
+                    <Menu Background="#FF1B1B1B" AutomationProperties.IsOffscreenBehavior="Offscreen" AutomationProperties.Name="menu" Height="40" HorizontalContentAlignment="Stretch" Grid.ColumnSpan="2" MaxHeight="10002" VerticalAlignment="Bottom">
+                        <MenuItem Header="" Height="40" Width="40" RenderTransformOrigin="0.5,0.5">
+                            <MenuItem.Background>
+                                <ImageBrush ImageSource="logo.png"/>
+                            </MenuItem.Background>
+                        </MenuItem>
+                        <MenuItem Header="" Height="30" Width="43"/>
+                    </Menu>
+                </Grid>
+            </Canvas>
+        </StackPanel>
+        <StackPanel x:Name="pnlFooter" Margin="0,0,-143,0" Background="#FF1B1B1B" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="25" VerticalAlignment="Bottom">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <TextBlock x:Name="pnlFooter1" TextWrapping="Wrap" Width="466" Foreground="#FFC1C1C1" Height="25" Margin="235,0,234,0" HorizontalAlignment="Center" VerticalAlignment="Bottom" Padding="4,4,6,4"><Run Text="Copyright © "/><Run Text="by Glodzienski "/><Run Text="20"/><Run Text="18"/><Run Text=" "/><Run Text="- "/><Run Text="Parking System"/><Run Text=" - Todos os direitos reservados."/></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

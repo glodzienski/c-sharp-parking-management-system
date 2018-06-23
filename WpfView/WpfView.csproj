@@ -61,6 +61,9 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="exemplos.xaml.cs">
+      <DependentUpon>exemplos.xaml</DependentUpon>
+    </Compile>
     <Compile Include="telas\screenClientes.xaml.cs">
       <DependentUpon>screenClientes.xaml</DependentUpon>
     </Compile>
@@ -77,6 +80,10 @@
       <DependentUpon>screenVagas.xaml</DependentUpon>
     </Compile>
     <Page Include="frmSystem.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="exemplos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

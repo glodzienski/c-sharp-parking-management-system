@@ -20,30 +20,6 @@ namespace WpfView
         public MainWindow()
         {
             InitializeComponent();
-
-            txtNome.Text = "Olá mundo!";
-        }
-
-        private void btnCliqueMe_Click(object sender, RoutedEventArgs e)
-        {
-            MessageBox.Show("Eai usuário, tudo bem?");
-        }
-
-        private void CheckBox_Checked(object sender, RoutedEventArgs e)
-        {
-            btnCliqueMe.Visibility = Visibility.Hidden;
-        }
-
-        private void CheckBox_Unchecked(object sender, RoutedEventArgs e)
-        {
-            btnCliqueMe.Visibility = Visibility.Visible;
-        }
-
-        private void btnCarregarCadastroUsuario_Click(object sender, RoutedEventArgs e)
-        {
-            frmSystem frm = new frmSystem();
-            frm.ShowDialog();
-            //frm.ShowDialog();
         }
     }
 }
