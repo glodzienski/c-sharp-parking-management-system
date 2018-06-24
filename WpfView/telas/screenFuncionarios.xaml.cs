@@ -14,20 +14,52 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using WpfView.common;
 
 namespace WpfView.telas
 {
-    /// <summary>
-    /// Interação lógica para screenFuncionarios.xam
-    /// </summary>
+    
     public partial class screenFuncionarios : UserControl
     {
+        FuncionarioController controller = new FuncionarioController();
+
         public screenFuncionarios()
         {
             InitializeComponent();
-            FuncionarioController controller = new FuncionarioController();
+            CarregarFuncionarios();
+        }
+
+        private void CarregarFuncionarios()
+        {
             IList<Funcionario> lista = controller.List();
             dbGridFuncionarios.ItemsSource = lista;
+        }
+
+        private void OnClickExcluirFuncionario(object sender, RoutedEventArgs e)
+        {
+            Funcionario funcionario = ((FrameworkElement)sender).DataContext as Funcionario;
+
+            if (Dialog.OnConfirma("Você deseja realmente excluir?", "Excluir"))
+            {
+                controller.Delete(funcionario);
+                Dialog.OnInforma("Funcionário excluído com sucesso");
+                CarregarFuncionarios();
+            }
+        }
+
+        private void OnClickEditarFuncionario(object sender, RoutedEventArgs e)
+        {
+            Funcionario funcionario = ((FrameworkElement)sender).DataContext as Funcionario;
+            frmFuncionarioEditar frm = new frmFuncionarioEditar(funcionario);
+            frm.Closed += (s, args) => CarregarFuncionarios();
+            frm.Show();
+        }
+
+        private void btnNovoFuncionario_Click(object sender, RoutedEventArgs e)
+        {
+            frmFuncionarioNovo frm = new frmFuncionarioNovo();
+            frm.Closed += (s, args) => CarregarFuncionarios();
+            frm.Show();
         }
     }
 }

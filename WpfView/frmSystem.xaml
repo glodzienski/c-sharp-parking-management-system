@@ -68,7 +68,7 @@
                         <ColumnDefinition Width="15"/>
                         <ColumnDefinition Width="897*"/>
                     </Grid.ColumnDefinitions>
-                    <telas:screenFuncionarios Grid.ColumnSpan="3" Margin="0,0,819,294"/>
+                    <telas:screenFuncionarios Grid.ColumnSpan="3" Margin="0"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabVagas" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">

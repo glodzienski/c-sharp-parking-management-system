@@ -17,7 +17,7 @@ namespace StartBD
             Funcionario funcionario = new Funcionario();
             funcionario.Administrador = true;
             funcionario.Ativo = true;
-            funcionario.Cpf = 09976494963;
+            funcionario.Cpf = "09976494963";
             funcionario.Email = "contato@crystopher.com.br";
             funcionario.Nome = "Crystopher";
             funcionario.Sobrenome = "Glodzienski";

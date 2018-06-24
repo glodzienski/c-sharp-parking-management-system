@@ -47,7 +47,7 @@ namespace WpfView.telas
         {
             Cliente cliente = ((FrameworkElement)sender).DataContext as Cliente;
 
-            if (Dialog.OnConfirma("Você deseja realmente exlcuir?", "Excluir"))
+            if (Dialog.OnConfirma("Você deseja realmente excluir?", "Excluir"))
             {
                 controller.Delete(cliente);
                 Dialog.OnInforma("Cliente excluído com sucesso");
