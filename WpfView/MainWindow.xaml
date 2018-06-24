@@ -50,7 +50,7 @@
                 </AutomationProperties.LabeledBy>
             </TextBox>
             <Label Content="Senha" Height="30" Margin="236,20,246,0" Width="300"/>
-            <TextBox x:Name="edtPassword" TextWrapping="Wrap" VerticalContentAlignment="Center" Panel.ZIndex="2" ToolTip="Insira seu email" TabIndex="0" AllowDrop="False" FontSize="14" MaxLines="1" UseLayoutRounding="False" Margin="236,0,235,0" Height="30" Width="300">
+            <TextBox x:Name="edtPassword" TextWrapping="Wrap" VerticalContentAlignment="Center" Panel.ZIndex="2" ToolTip="Insira sua senha" TabIndex="0" AllowDrop="False" FontSize="14" MaxLines="1" UseLayoutRounding="False" Margin="236,0,235,0" Height="30" Width="300">
                 <AutomationProperties.LabeledBy>
                     <Label/>
                 </AutomationProperties.LabeledBy>

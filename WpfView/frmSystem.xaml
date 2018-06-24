@@ -61,7 +61,7 @@
                     <telas:screenClientes Grid.ColumnSpan="3" Margin="0,0,-100,-100"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabFuncionarios" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE4E4E4">
+            <TabItem x:Name="tabFuncionarios" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE4E4E4">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="7*"/>
@@ -71,7 +71,7 @@
                     <telas:screenFuncionarios Grid.ColumnSpan="3" Margin="0,0,819,294"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabVagas" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">
+            <TabItem x:Name="tabVagas" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="7*"/>

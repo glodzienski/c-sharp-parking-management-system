@@ -18,6 +18,6 @@ namespace Models
 
         public bool Ativo { get; set; }
 
-        public long Cpf { get; set; }
+        public string Cpf { get; set; }
     }
 }

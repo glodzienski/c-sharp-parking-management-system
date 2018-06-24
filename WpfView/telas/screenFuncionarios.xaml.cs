@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +25,9 @@ namespace WpfView.telas
         public screenFuncionarios()
         {
             InitializeComponent();
+            FuncionarioController controller = new FuncionarioController();
+            IList<Funcionario> lista = controller.List();
+            dbGridFuncionarios.ItemsSource = lista;
         }
     }
 }
