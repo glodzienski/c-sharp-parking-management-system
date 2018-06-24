@@ -6,5 +6,26 @@
              xmlns:local="clr-namespace:WpfView.telas"
              mc:Ignorable="d" 
              d:DesignHeight="450" d:DesignWidth="800">
-    <Grid Background="#FFE2DEDE"/>
+    <Grid Background="#FFE2E2E2">
+        <Button x:Name="btnNovaVaga" Content="Novo" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.133,0.5" Height="25" Click="btnNovoCliente_Click"/>
+        <DataGrid x:Name="dbGridVagas" Margin="5,40,5,0" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center">
+            <DataGrid.Columns>
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="OnClickExcluirVaga" Content="Excluir"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+
+                <DataGridTemplateColumn>
+                    <DataGridTemplateColumn.CellTemplate>
+                        <DataTemplate>
+                            <Button Click="OnClickEditarVaga" Content="Editar"/>
+                        </DataTemplate>
+                    </DataGridTemplateColumn.CellTemplate>
+                </DataGridTemplateColumn>
+            </DataGrid.Columns>
+        </DataGrid>
+    </Grid>
 </UserControl>

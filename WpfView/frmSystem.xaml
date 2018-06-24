@@ -78,7 +78,7 @@
                         <ColumnDefinition Width="15"/>
                         <ColumnDefinition Width="897*"/>
                     </Grid.ColumnDefinitions>
-                    <telas:screenVagas Grid.ColumnSpan="3" Margin="0,0,819,294"/>
+                    <telas:screenVagas Grid.ColumnSpan="3" Margin="0"/>
                 </Grid>
             </TabItem>
         </TabControl>
