@@ -34,6 +34,29 @@
                 </Grid>
             </Canvas>
         </StackPanel>
+        <StackPanel x:Name="pnlContent" Margin="5,45,5,30" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Background="#FFDADADA" Grid.ColumnSpan="4">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <Label Content="Email" Margin="236,50,246,0" Height="30" Width="300"/>
+            <TextBox x:Name="edtEmail" TextWrapping="Wrap" VerticalContentAlignment="Center" Panel.ZIndex="2" ToolTip="Insira seu email" TabIndex="0" AllowDrop="False" FontSize="14" MaxLines="1" UseLayoutRounding="False" Margin="241.5,0,240.5,0" Height="30" Width="300">
+                <AutomationProperties.LabeledBy>
+                    <Label/>
+                </AutomationProperties.LabeledBy>
+            </TextBox>
+            <Label Content="Senha" Height="30" Margin="236,20,246,0" Width="300"/>
+            <TextBox x:Name="edtPassword" TextWrapping="Wrap" VerticalContentAlignment="Center" Panel.ZIndex="2" ToolTip="Insira seu email" TabIndex="0" AllowDrop="False" FontSize="14" MaxLines="1" UseLayoutRounding="False" Margin="236,0,235,0" Height="30" Width="300">
+                <AutomationProperties.LabeledBy>
+                    <Label/>
+                </AutomationProperties.LabeledBy>
+            </TextBox>
+            <Button Content="Login" Width="100" Height="30" Margin="0,30,0,0" Background="#FF404040" FontWeight="Bold" Foreground="#FFCFCFCF" Click="Button_Click"/>
+        </StackPanel>
         <StackPanel x:Name="pnlFooter" Margin="0,0,-143,0" Background="#FF1B1B1B" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="25" VerticalAlignment="Bottom">
             <StackPanel.RenderTransform>
                 <TransformGroup>

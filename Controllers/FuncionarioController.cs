@@ -54,7 +54,7 @@ namespace Controllers
 
         public Funcionario Login(string email, string password)
         {
-            return contexto.Funcionario.Where(func => func.Email == email && func.Senha == password).First<Funcionario>();
+            return contexto.Funcionario.Where(func => func.Email == email && func.Senha == password).FirstOrDefault<Funcionario>();
         }
     }
 }

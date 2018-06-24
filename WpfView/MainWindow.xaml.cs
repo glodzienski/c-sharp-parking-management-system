@@ -1,4 +1,6 @@
-﻿using System;
+﻿using Controllers;
+using Models;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -20,6 +22,46 @@ namespace WpfView
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void Button_Click(object sender, RoutedEventArgs e)
+        {
+            String email = edtEmail.Text;
+            String password = edtPassword.Text;
+
+            Boolean validated = true;
+            String messageToValidate = "";
+
+            if (email.Equals(""))
+            {
+                messageToValidate += "Por favor preencha seu email.";
+                validated = false;
+            }
+            if (password.Equals(""))
+            {
+                messageToValidate += "\nPor favor preencha sua senha.";
+                validated = false;
+            }
+            if (!validated)
+            {
+                MessageBox.Show(messageToValidate);
+            }
+            else 
+            {
+                FuncionarioController funcionarioController = new FuncionarioController();
+                Funcionario funcionario = funcionarioController.Login(email, password);
+
+                if (funcionario != null)
+                {
+                    this.Hide();
+                    frmSystem frm = new frmSystem();
+                    frm.Closed += (s, args) => this.Close();
+                    frm.Show();
+                } else
+                {
+                    MessageBox.Show("Email ou senha incorretos.");
+                }
+            }
         }
     }
 }
