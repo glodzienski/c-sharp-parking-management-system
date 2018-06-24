@@ -32,7 +32,7 @@
                         <MenuItem Header="" Height="30" Width="43"/>
                         <MenuItem Header="Clientes" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click"/>
                         <MenuItem Header="Funcionários" Height="30" Width="102" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_1"/>
-                        <MenuItem Header="Serviços" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1"/>
+                        <MenuItem Header="Serviços" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_3"/>
                         <MenuItem Header="Pacotes" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1"/>
                         <MenuItem Header="Vagas" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_2"/>
                     </Menu>
@@ -81,14 +81,14 @@
                     <telas:screenVagas Grid.ColumnSpan="3" Margin="0"/>
                 </Grid>
             </TabItem>
-            <TabItem x:Name="tabVagas_Copy" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">
+            <TabItem x:Name="tabServicos" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">
                 <Grid Background="#FFE5E5E5">
                     <Grid.ColumnDefinitions>
                         <ColumnDefinition Width="7*"/>
                         <ColumnDefinition Width="15"/>
                         <ColumnDefinition Width="897*"/>
                     </Grid.ColumnDefinitions>
-                    <telas:screenVagas Grid.ColumnSpan="3" Margin="0"/>
+                    <telas:screenServicos Grid.ColumnSpan="3" Margin="0"/>
                 </Grid>
             </TabItem>
         </TabControl>
