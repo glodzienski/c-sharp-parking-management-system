@@ -67,6 +67,12 @@
     <Compile Include="exemplos.xaml.cs">
       <DependentUpon>exemplos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="telas\frmServicoEditar.xaml.cs">
+      <DependentUpon>frmServicoEditar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\frmServicoNovo.xaml.cs">
+      <DependentUpon>frmServicoNovo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="telas\frmVagaNovo.xaml.cs">
       <DependentUpon>frmVagaNovo.xaml</DependentUpon>
     </Compile>
@@ -123,6 +129,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="telas\frmServicoEditar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="telas\frmServicoNovo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="telas\frmVagaNovo.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
