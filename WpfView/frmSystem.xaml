@@ -6,7 +6,7 @@
         xmlns:local="clr-namespace:WpfView"
         xmlns:telas="clr-namespace:WpfView.telas" x:Class="WpfView.frmSystem"
         mc:Ignorable="d"
-        Title="Cadastro de Cliente" Height="512" Width="943" WindowStartupLocation="CenterOwner" Background="#FF8B8B8B" WindowState="Maximized">
+        Title="Parking System" Height="512" Width="943" WindowStartupLocation="CenterOwner" Background="#FF8B8B8B" WindowState="Maximized">
     <Grid Margin="0" Grid.IsSharedSizeScope="True">
         <StackPanel x:Name="pnlMenu" Margin="0,0,0,8" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="40" VerticalAlignment="Top" Background="#FF1B1B1B">
             <StackPanel.RenderTransform>
@@ -30,10 +30,10 @@
                             </MenuItem.Background>
                         </MenuItem>
                         <MenuItem Header="" Height="30" Width="43"/>
+                        <MenuItem Header="Comanda" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click" RenderTransformOrigin="-1.375,0.5"/>
                         <MenuItem Header="Clientes" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click"/>
                         <MenuItem Header="Funcionários" Height="30" Width="102" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_1"/>
-                        <MenuItem Header="Serviços" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_3"/>
-                        <MenuItem Header="Pacotes" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1"/>
+                        <MenuItem Header="Serviços" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_4"/>
                         <MenuItem Header="Vagas" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="MenuItem_Click_2"/>
                     </Menu>
                 </Grid>

@@ -25,6 +25,7 @@ namespace WpfView.telas
         public screenServicos()
         {
             InitializeComponent();
+            CarregarServicos();
         }
 
         private void btnNovoCliente_Click(object sender, RoutedEventArgs e)

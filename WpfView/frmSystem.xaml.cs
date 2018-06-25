@@ -36,7 +36,7 @@ namespace WpfView
             tabVagas.IsSelected = true;
         }
 
-        private void MenuItem_Click_3(object sender, RoutedEventArgs e)
+        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
         {
             tabServicos.IsSelected = true;
         }
