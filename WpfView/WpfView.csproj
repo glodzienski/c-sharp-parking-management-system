@@ -91,6 +91,9 @@
     <Compile Include="telas\frmClienteNovo.xaml.cs">
       <DependentUpon>frmClienteNovo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="telas\screenComanda.xaml.cs">
+      <DependentUpon>screenComanda.xaml</DependentUpon>
+    </Compile>
     <Compile Include="telas\screenClientes.xaml.cs">
       <DependentUpon>screenClientes.xaml</DependentUpon>
     </Compile>
@@ -158,6 +161,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="telas\frmClienteNovo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="telas\screenComanda.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

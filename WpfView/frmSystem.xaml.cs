@@ -21,24 +21,29 @@ namespace WpfView
             InitializeComponent();
         }
 
-        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        private void itemComanda_Click(object sender, RoutedEventArgs e)
+        {
+            tabComanda.IsSelected = true;
+        }
+
+        private void itemClientes_Click(object sender, RoutedEventArgs e)
         {
             tabClientes.IsSelected = true;
         }
 
-        private void MenuItem_Click_1(object sender, RoutedEventArgs e)
+        private void itemFuncionario_Click(object sender, RoutedEventArgs e)
         {
             tabFuncionarios.IsSelected = true;
         }
 
-        private void MenuItem_Click_2(object sender, RoutedEventArgs e)
-        {
-            tabVagas.IsSelected = true;
-        }
-
-        private void MenuItem_Click_4(object sender, RoutedEventArgs e)
+        private void itemServicos_Click(object sender, RoutedEventArgs e)
         {
             tabServicos.IsSelected = true;
+        }
+
+        private void itemVagas_Click(object sender, RoutedEventArgs e)
+        {
+            tabVagas.IsSelected = true;
         }
     }
 }
