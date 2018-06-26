@@ -16,30 +16,30 @@ namespace Controllers
 
             if (veiculoTipo != null)
             {
-                contexto.VeiculoTipo.Remove(veiculoTipo);
-                contexto.SaveChanges();
+                Singleton.Instancia.VeiculoTipo.Remove(veiculoTipo);
+                Singleton.Instancia.SaveChanges();
             }
         }
 
         public void Edit(VeiculoTipo obj)
         {
-            contexto.Entry(obj).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            Singleton.Instancia.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            Singleton.Instancia.SaveChanges();
         }
 
         public VeiculoTipo FindById(int id)
         {
-            return contexto.VeiculoTipo.Find(id);
+            return Singleton.Instancia.VeiculoTipo.Find(id);
         }
 
         public IList<VeiculoTipo> List()
         {
-            return contexto.VeiculoTipo.ToList();
+            return Singleton.Instancia.VeiculoTipo.ToList();
         }
         public void Store(VeiculoTipo obj)
         {
-            contexto.VeiculoTipo.Add(obj);
-            contexto.SaveChanges();
+            Singleton.Instancia.VeiculoTipo.Add(obj);
+            Singleton.Instancia.SaveChanges();
         }
     }
 }

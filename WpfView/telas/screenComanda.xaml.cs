@@ -20,31 +20,56 @@ namespace WpfView.telas
     public partial class screenComanda : UserControl
     {
         ComandaController comandaController = new ComandaController();
-        ClienteController clienteController = new ClienteController();
         VagaController vagaController = new VagaController();
-        ServicoController servicoController = new ServicoController();
 
         public screenComanda()
         {
             InitializeComponent();
-            CarregarClientes();
-            CarregarServicos();
-            CarregarVagas();
+            CarregarComandas();
+            CarregarVagas(false);
         }
 
-        private void CarregarClientes()
+        private void CarregarComandas()
         {
-            IList<Cliente> listaClientes = clienteController.List();
+            IList<Comanda> listaComandas = comandaController.List();
+            dbGridComandas.ItemsSource = listaComandas;
         }
 
-        private void CarregarVagas()
+        private void CarregarVagas(bool ocupadas)
         {
-            IList<Vaga> listaVagas = vagaController.List();
+            IList<Vaga> listaVagas = vagaController.List(ocupadas);
+            dbGridVagasDisponiveis.ItemsSource = listaVagas;
         }
 
-        private void CarregarServicos()
+        private void OnAbrirNovaComanda(object sender, RoutedEventArgs e)
         {
-            IList<Servico> listaServicos = servicoController.List();
+            Vaga vaga = ((FrameworkElement)sender).DataContext as Vaga;
+            frmComandaNova frm = new frmComandaNova(vaga);
+            frm.Closed += (s, args) =>
+            {
+                CarregarComandas();
+                CarregarVagas(false);
+            };
+            frm.Show();
+        }
+
+        private void OnFecharComanda(object sender, RoutedEventArgs e)
+        {
+            Comanda comanda = ((FrameworkElement)sender).DataContext as Comanda;
+
+            if (Dialog.OnConfirma("Você deseja fechar essa comanda?", "Fechar"))
+            {
+                comandaController.Fechar(comanda);
+
+                Vaga vaga = comanda._Vaga;
+                vaga.Ocupada = false;
+                vagaController.Edit(vaga);
+
+                CarregarVagas(false);
+                CarregarComandas();
+
+                Dialog.OnInforma("Comanda fechada com sucesso");
+            }
         }
     }
 }

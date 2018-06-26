@@ -10,7 +10,7 @@
         <Button x:Name="btnNovaVaga" Content="Novo" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.133,0.5" Height="25" Click="btnNovoCliente_Click"/>
         <DataGrid x:Name="dbGridVagas" Margin="5,40,5,0" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center">
             <DataGrid.Columns>
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Excluir">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="OnClickExcluirVaga" Content="Excluir"/>
@@ -18,13 +18,16 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
-                <DataGridTemplateColumn>
+                <DataGridTemplateColumn Header="Editar">
                     <DataGridTemplateColumn.CellTemplate>
                         <DataTemplate>
                             <Button Click="OnClickEditarVaga" Content="Editar"/>
                         </DataTemplate>
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
+
+                <DataGridTextColumn Binding="{Binding _VagaTipo.Descricao}" Header="Tipo"></DataGridTextColumn>
+
             </DataGrid.Columns>
         </DataGrid>
     </Grid>

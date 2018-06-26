@@ -12,7 +12,7 @@ namespace Models
 
         public string Codigo { get; set; }
 
-        public int Andar { get; set; }
+        public string Andar { get; set; }
 
         public bool Ocupada { get; set; }
 

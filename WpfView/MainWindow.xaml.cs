@@ -27,7 +27,7 @@ namespace WpfView
         private void Button_Click(object sender, RoutedEventArgs e)
         {
             String email = edtEmail.Text;
-            String password = edtPassword.Text;
+            String password = edtPassword.Password;
 
             Boolean validated = true;
             String messageToValidate = "";
@@ -54,6 +54,7 @@ namespace WpfView
                 if (funcionario != null)
                 {
                     this.Hide();
+                    App.FuncionarioLogado = funcionario;
                     frmSystem frm = new frmSystem();
                     frm.Closed += (s, args) => this.Close();
                     frm.Show();

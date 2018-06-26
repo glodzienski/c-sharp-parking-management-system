@@ -73,6 +73,9 @@
     <Compile Include="telas\frmServicoNovo.xaml.cs">
       <DependentUpon>frmServicoNovo.xaml</DependentUpon>
     </Compile>
+    <Compile Include="telas\frmComandaNova.xaml.cs">
+      <DependentUpon>frmComandaNova.xaml</DependentUpon>
+    </Compile>
     <Compile Include="telas\frmVagaNovo.xaml.cs">
       <DependentUpon>frmVagaNovo.xaml</DependentUpon>
     </Compile>
@@ -137,6 +140,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="telas\frmServicoNovo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="telas\frmComandaNova.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
@@ -226,6 +233,10 @@
     <ProjectReference Include="..\Controllers\Controllers.csproj">
       <Project>{C303161E-C8E8-4B98-A664-E36B7E953D47}</Project>
       <Name>Controllers</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Enumerable\Enumerable.csproj">
+      <Project>{E19E4275-77C6-443D-A0D6-6A29CBCE006A}</Project>
+      <Name>Enumerable</Name>
     </ProjectReference>
     <ProjectReference Include="..\Modelos\Models.csproj">
       <Project>{C74AD50B-5670-4EA5-9586-15DBB7765465}</Project>

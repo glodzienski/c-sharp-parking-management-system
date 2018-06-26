@@ -62,10 +62,9 @@ namespace WpfView
                 }
 
                 this.vaga.Codigo = codigo;
-                this.vaga.Andar = Convert.ToInt32(andar);
+                this.vaga.Andar = andar;
                 this.vaga.Ativo = ativo;
-                this.vaga._VagaTipo = vagaTipoController.FindById(vagaTipoId);
-                //this.vaga.VagaTipoID = vagaTipoId;
+                this.vaga.VagaTipoID = vagaTipoId;
                 controller.Edit(vaga);
 
                 MessageBox.Show("Vaga atualizada com sucesso!");

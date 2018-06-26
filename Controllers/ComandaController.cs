@@ -2,6 +2,7 @@
 using System.Linq;
 using Controllers.Base;
 using Controllers.DAL;
+using Enumerable;
 using Models;
 
 namespace Controllers
@@ -16,31 +17,38 @@ namespace Controllers
 
             if (comanda != null)
             {
-                contexto.Comanda.Remove(comanda);
-                contexto.SaveChanges();
+                Singleton.Instancia.Comanda.Remove(comanda);
+                Singleton.Instancia.SaveChanges();
             }
         }
 
         public void Edit(Comanda obj)
         {
-            contexto.Entry(obj).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            Singleton.Instancia.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            Singleton.Instancia.SaveChanges();
         }
 
         public Comanda FindById(int id)
         {
-            return contexto.Comanda.Find(id);
+            return Singleton.Instancia.Comanda.Find(id);
         }
 
         public IList<Comanda> List()
         {
-            return contexto.Comanda.ToList();
+            return Singleton.Instancia.Comanda.ToList();
         }
 
         public void Store(Comanda obj)
         {
-            contexto.Comanda.Add(obj);
-            contexto.SaveChanges();
+            Singleton.Instancia.Comanda.Add(obj);
+            Singleton.Instancia.SaveChanges();
+        }
+
+        public void Fechar(Comanda comanda)
+        {
+            comanda.ComandaStatusID = ComandaStatusEnum.Fechada;
+            Singleton.Instancia.Entry(comanda).State = System.Data.Entity.EntityState.Modified;
+            Singleton.Instancia.SaveChanges();
         }
     }
 }

@@ -16,30 +16,30 @@ namespace Controllers
 
             if (vagaTipo != null)
             {
-                contexto.VagaTipo.Remove(vagaTipo);
-                contexto.SaveChanges();
+                Singleton.Instancia.VagaTipo.Remove(vagaTipo);
+                Singleton.Instancia.SaveChanges();
             }
         }
 
         public void Edit(VagaTipo obj)
         {
-            contexto.Entry(obj).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            Singleton.Instancia.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            Singleton.Instancia.SaveChanges();
         }
 
         public VagaTipo FindById(int id)
         {
-            return contexto.VagaTipo.Find(id);
+            return Singleton.Instancia.VagaTipo.Find(id);
         }
 
         public IList<VagaTipo> List()
         {
-            return contexto.VagaTipo.ToList();
+            return Singleton.Instancia.VagaTipo.ToList();
         }
         public void Store(VagaTipo obj)
         {
-            contexto.VagaTipo.Add(obj);
-            contexto.SaveChanges();
+            Singleton.Instancia.VagaTipo.Add(obj);
+            Singleton.Instancia.SaveChanges();
         }
     }
 }

@@ -16,36 +16,36 @@ namespace Controllers
 
             if (pacote != null)
             {
-                contexto.Pacote.Remove(pacote);
-                contexto.SaveChanges();
+                Singleton.Instancia.Pacote.Remove(pacote);
+                Singleton.Instancia.SaveChanges();
             }
         }
 
         public void Edit(Pacote obj)
         {
-            contexto.Entry(obj).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            Singleton.Instancia.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            Singleton.Instancia.SaveChanges();
         }
 
         public Pacote FindById(int id)
         {
-            return contexto.Pacote.Find(id);
+            return Singleton.Instancia.Pacote.Find(id);
         }
 
         public IList<Pacote> List()
         {
-            return contexto.Pacote.ToList();
+            return Singleton.Instancia.Pacote.ToList();
         }
 
         public IList<Pacote> ListByName(string name)
         {
-            return contexto.Pacote.Where(servico => servico.Nome == name).ToList();
+            return Singleton.Instancia.Pacote.Where(servico => servico.Nome == name).ToList();
         }
 
         public void Store(Pacote obj)
         {
-            contexto.Pacote.Add(obj);
-            contexto.SaveChanges();
+            Singleton.Instancia.Pacote.Add(obj);
+            Singleton.Instancia.SaveChanges();
         }
     }
 }

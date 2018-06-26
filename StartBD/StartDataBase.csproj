@@ -53,6 +53,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="FuncionarioSeeder.cs" />
+    <Compile Include="VagaSeeder.cs" />
     <Compile Include="VagaTipoSeeder.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

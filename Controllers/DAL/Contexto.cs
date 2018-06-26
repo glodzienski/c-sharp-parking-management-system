@@ -3,7 +3,7 @@ using Models;
 
 namespace Controllers.DAL
 {
-    class Contexto : DbContext
+    public class Contexto : DbContext
     {
         public Contexto() : base("strConn")
         {
@@ -16,8 +16,6 @@ namespace Controllers.DAL
             // Apaga e recria a base de dados cada vez que houver alteração nas model
             //Database.SetInitializer(new DropCreateDatabaseIfModelChanges<Contexto>());
         }
-
-        public DbSet<ComandaItem> ComandaItem { get; set; }
 
         public DbSet<ComandaStatus> ComandaStatus { get; set; }
 

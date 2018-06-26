@@ -10,9 +10,17 @@ namespace Models
     {
         public int ComandaID { get; set; }
 
-        public float Total { get; set; }
+        public double Total { get; set; }
 
         public int ComandaStatusID { get; set; }
+
+        public int ServicoID { get; set; }
+
+        public int VagaID { get; set; }
+
+        public virtual Vaga _Vaga { get; set; }
+
+        public virtual Servico _Servico { get; set; }
 
         public virtual ComandaStatus _ComandaStatus { get; set; }
 

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Controllers;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -16,9 +17,16 @@ namespace WpfView
 {
     public partial class frmSystem : Window
     {
+
         public frmSystem()
         {
             InitializeComponent();
+            if (!App.FuncionarioLogado.Administrador)
+            {
+                itemServicos.Visibility = Visibility.Collapsed;
+                itemFuncionario.Visibility = Visibility.Collapsed;
+                itemVagas.Visibility = Visibility.Collapsed;
+            }
         }
 
         private void itemComanda_Click(object sender, RoutedEventArgs e)

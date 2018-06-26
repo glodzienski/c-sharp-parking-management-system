@@ -58,7 +58,7 @@ namespace WpfView
 
                 Vaga vaga = new Vaga();
                 vaga.Codigo = codigo;
-                vaga.Andar = Convert.ToInt32(andar);
+                vaga.Andar = andar;
                 vaga.Ativo = ativo;
                 vaga.VagaTipoID = vagaTipoId;
                 vaga.Ocupada = false;

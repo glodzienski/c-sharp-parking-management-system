@@ -50,11 +50,7 @@
                 </AutomationProperties.LabeledBy>
             </TextBox>
             <Label Content="Senha" Height="30" Margin="236,20,246,0" Width="300"/>
-            <TextBox x:Name="edtPassword" TextWrapping="Wrap" VerticalContentAlignment="Center" Panel.ZIndex="2" ToolTip="Insira sua senha" TabIndex="0" AllowDrop="False" FontSize="14" MaxLines="1" UseLayoutRounding="False" Margin="236,0,235,0" Height="30" Width="300">
-                <AutomationProperties.LabeledBy>
-                    <Label/>
-                </AutomationProperties.LabeledBy>
-            </TextBox>
+            <PasswordBox x:Name="edtPassword" Width="300" Height="30" TabIndex="1" IsHitTestVisible="False"/>
             <Button Content="Login" Width="100" Height="30" Margin="0,30,0,0" Background="#FF404040" FontWeight="Bold" Foreground="#FFCFCFCF" Click="Button_Click"/>
         </StackPanel>
         <StackPanel x:Name="pnlFooter" Margin="0,0,-143,0" Background="#FF1B1B1B" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="25" VerticalAlignment="Bottom">

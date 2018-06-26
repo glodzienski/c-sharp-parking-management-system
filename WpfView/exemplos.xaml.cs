@@ -41,8 +41,8 @@ namespace WpfView
 
         private void btnCarregarCadastroUsuario_Click(object sender, RoutedEventArgs e)
         {
-            frmSystem frm = new frmSystem();
-            frm.ShowDialog();
+            //frmSystem frm = new frmSystem();
+            //frm.ShowDialog();
             //frm.ShowDialog();
         }
     }

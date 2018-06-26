@@ -8,7 +8,6 @@ namespace Controllers
 {
     public class VagaController : IBaseController<Vaga>
     {
-        private Contexto contexto = new Contexto();
 
         public void Delete(Vaga obj)
         {
@@ -16,30 +15,36 @@ namespace Controllers
 
             if (vaga != null)
             {
-                contexto.Vaga.Remove(vaga);
-                contexto.SaveChanges();
+                Singleton.Instancia.Vaga.Remove(vaga);
+                Singleton.Instancia.SaveChanges();
             }
         }
 
         public void Edit(Vaga obj)
         {
-            contexto.Entry(obj).State = System.Data.Entity.EntityState.Modified;
-            contexto.SaveChanges();
+            Singleton.Instancia.Entry(obj).State = System.Data.Entity.EntityState.Modified;
+            Singleton.Instancia.SaveChanges();
         }
 
         public Vaga FindById(int id)
         {
-            return contexto.Vaga.Find(id);
+            return Singleton.Instancia.Vaga.Find(id);
+        }
+
+        public IList<Vaga> List(bool ocupadas = false, bool ativas = true)
+        {
+            return Singleton.Instancia.Vaga.Where(vaga => vaga.Ocupada == ocupadas && vaga.Ativo == ativas).ToList();
         }
 
         public IList<Vaga> List()
         {
-            return contexto.Vaga.ToList();
+            return Singleton.Instancia.Vaga.ToList();
         }
+
         public void Store(Vaga obj)
         {
-            contexto.Vaga.Add(obj);
-            contexto.SaveChanges();
+            Singleton.Instancia.Vaga.Add(obj);
+            Singleton.Instancia.SaveChanges();
         }
     }
 }

@@ -13,7 +13,7 @@ namespace ConsoleView
         static void Main(string[] args)
         {
             Vaga vaga = new Vaga();
-            vaga.Andar = 1;
+            vaga.Andar = "1";
             vaga.Ativo = true;
             vaga.Codigo = "teste";
             vaga.Ocupada = false;

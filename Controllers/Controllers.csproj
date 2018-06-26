@@ -51,6 +51,7 @@
     <Compile Include="Base\IBaseController.cs" />
     <Compile Include="ComandaController.cs" />
     <Compile Include="ComandaStatusController.cs" />
+    <Compile Include="DAL\Singleton.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VagaTipoController.cs" />
     <Compile Include="VeiculoTipoController.cs" />
@@ -67,6 +68,10 @@
     <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\Enumerable\Enumerable.csproj">
+      <Project>{E19E4275-77C6-443D-A0D6-6A29CBCE006A}</Project>
+      <Name>Enumerable</Name>
+    </ProjectReference>
     <ProjectReference Include="..\Modelos\Models.csproj">
       <Project>{c74ad50b-5670-4ea5-9586-15dbb7765465}</Project>
       <Name>Models</Name>
