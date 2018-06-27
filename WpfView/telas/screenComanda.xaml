@@ -16,15 +16,32 @@
                         <ColumnDefinition Width="35*"/>
                         <ColumnDefinition Width="601*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dbGridComandas" Margin="5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4">
+                    <DataGrid x:Name="dbGridComandas" Margin="5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" AutoGenerateColumns="False">
                         <DataGrid.Columns>
-                            <DataGridTemplateColumn>
+                            <DataGridTemplateColumn Header="Fechar">
                                 <DataGridTemplateColumn.CellTemplate>
                                     <DataTemplate>
                                         <Button Click="OnFecharComanda" Content="Fechar"/>
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
+
+                            <DataGridTemplateColumn Header="Vaga">
+                                <DataGridTemplateColumn.CellTemplate>
+                                    <DataTemplate>
+                                        <TextBlock>
+                                             <Run Text="{Binding _Vaga.Andar}" />
+                                             <Run Text="{Binding _Vaga.Codigo}" />
+                                        </TextBlock>
+                                    </DataTemplate>
+                                </DataGridTemplateColumn.CellTemplate>
+                            </DataGridTemplateColumn>
+                            
+                            <DataGridTextColumn Binding="{Binding _Servico.Nome}" Header="Serviço"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding _Cliente.Nome}" Header="Cliente"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding _ComandaStatus.Descricao}" Header="Status"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Total}" Header="Total"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding _Funcionario.Nome}" Header="Funcionário"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>
@@ -37,7 +54,7 @@
                         <ColumnDefinition Width="139*"/>
                         <ColumnDefinition Width="572*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dbGridVagasDisponiveis" Margin="5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4">
+                    <DataGrid x:Name="dbGridVagasDisponiveis" Margin="5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" AutoGenerateColumns="False">
                         <DataGrid.Columns>
                             <DataGridTemplateColumn>
                                 <DataGridTemplateColumn.CellTemplate>
@@ -46,6 +63,13 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
+
+                            <DataGridTextColumn Binding="{Binding Andar}" Header="Andar"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding Codigo}" Header="Codigo"></DataGridTextColumn>
+                            <DataGridCheckBoxColumn Binding="{Binding Ocupada}" Header="Ocupada"></DataGridCheckBoxColumn>
+                            <DataGridCheckBoxColumn Binding="{Binding Ativa}" Header="Ativa"></DataGridCheckBoxColumn>
+                            <DataGridTextColumn Binding="{Binding _VagaTipo.Descricao}" Header="Tipo"></DataGridTextColumn>
+
                         </DataGrid.Columns>
                     </DataGrid>
                 </Grid>

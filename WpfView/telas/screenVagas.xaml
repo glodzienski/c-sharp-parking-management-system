@@ -8,7 +8,7 @@
              d:DesignHeight="450" d:DesignWidth="800">
     <Grid Background="#FFE2E2E2">
         <Button x:Name="btnNovaVaga" Content="Novo" HorizontalAlignment="Left" Margin="4,7,0,0" VerticalAlignment="Top" Width="75" RenderTransformOrigin="-0.133,0.5" Height="25" Click="btnNovoCliente_Click"/>
-        <DataGrid x:Name="dbGridVagas" Margin="5,40,5,0" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center">
+        <DataGrid x:Name="dbGridVagas" Margin="5,40,5,0" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" AutoGenerateColumns="False">
             <DataGrid.Columns>
                 <DataGridTemplateColumn Header="Excluir">
                     <DataGridTemplateColumn.CellTemplate>
@@ -26,7 +26,11 @@
                     </DataGridTemplateColumn.CellTemplate>
                 </DataGridTemplateColumn>
 
+                <DataGridTextColumn Binding="{Binding Andar}" Header="Andar"></DataGridTextColumn>
+                <DataGridTextColumn Binding="{Binding Codigo}" Header="Codigo"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding _VagaTipo.Descricao}" Header="Tipo"></DataGridTextColumn>
+                <DataGridCheckBoxColumn Binding="{Binding Ocupada}" Header="Ocupada"></DataGridCheckBoxColumn>
+                <DataGridCheckBoxColumn Binding="{Binding Ativa}" Header="Ativa"></DataGridCheckBoxColumn>
 
             </DataGrid.Columns>
         </DataGrid>

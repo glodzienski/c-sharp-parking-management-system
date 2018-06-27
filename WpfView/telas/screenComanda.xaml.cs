@@ -1,4 +1,5 @@
 ﻿using Controllers;
+using Enumerable;
 using Models;
 using System;
 using System.Collections.Generic;
@@ -57,7 +58,11 @@ namespace WpfView.telas
         {
             Comanda comanda = ((FrameworkElement)sender).DataContext as Comanda;
 
-            if (Dialog.OnConfirma("Você deseja fechar essa comanda?", "Fechar"))
+            if (comanda.ComandaStatusID == ComandaStatusEnum.Fechada)
+            {
+                Dialog.OnInforma("Comanda já esta fechada");
+            }
+            else if (Dialog.OnConfirma("Você deseja fechar essa comanda?", "Fechar"))
             {
                 comandaController.Fechar(comanda);
 
