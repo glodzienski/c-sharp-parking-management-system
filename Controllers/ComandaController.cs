@@ -38,6 +38,11 @@ namespace Controllers
             return Singleton.Instancia.Comanda.ToList();
         }
 
+        public IList<Comanda> FindByStatus(int status)
+        {
+            return Singleton.Instancia.Comanda.Where(comanda => comanda.ComandaStatusID == status).ToList();
+        }
+
         public void Store(Comanda obj)
         {
             Singleton.Instancia.Comanda.Add(obj);

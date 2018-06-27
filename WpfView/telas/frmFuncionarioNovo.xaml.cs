@@ -25,7 +25,7 @@ namespace WpfView
 
         private void Button_Click(object sender, RoutedEventArgs e)
         {
-            String cpf = edtCpf.Text;
+            String cpf = TreatCpf(edtCpf.Text);
             String nome = edtNome.Text;
             String sobrenome = edtSobrenome.Text;
             String email = edtEmail.Text;
@@ -39,13 +39,17 @@ namespace WpfView
                 {
                     throw new Exception("Por favor preencha o campo CPF.");
                 }
+                if (!long.TryParse(cpf, out Int64 n) || cpf.Length != 11)
+                {
+                    throw new Exception("CPF inválido");
+                }
                 if (nome.Equals(""))
                 {
                     throw new Exception("Por favor preencha o campo Nome.");
                 }
 
                 Funcionario funcionario = new Funcionario();
-                funcionario.Cpf = TreatCpf(cpf);
+                funcionario.Cpf = cpf;
                 funcionario.Nome = nome;
                 funcionario.Sobrenome = sobrenome;
                 funcionario.Email = email;

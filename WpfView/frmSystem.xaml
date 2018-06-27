@@ -30,11 +30,12 @@
                             </MenuItem.Background>
                         </MenuItem>
                         <MenuItem Header="" Height="30" Width="43"/>
-                        <MenuItem x:Name="itemComanda" Header="Comanda" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" RenderTransformOrigin="-1.375,0.5" Click="itemComanda_Click" IsCheckable="True"/>
+                        <MenuItem x:Name="itemComanda" Header="Comanda" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" RenderTransformOrigin="-1.375,0.5" Click="itemComanda_Click"/>
                         <MenuItem x:Name="itemClientes" Header="Clientes" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemClientes_Click"/>
                         <MenuItem x:Name="itemFuncionario" Header="Funcionários" Height="30" Width="102" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemFuncionario_Click"/>
                         <MenuItem x:Name="itemServicos" Header="Serviços" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemServicos_Click"/>
                         <MenuItem x:Name="itemVagas" Header="Vagas" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemVagas_Click"/>
+                        <MenuItem x:Name="itemSair" Header="Sair" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemSair_Click"/>
                     </Menu>
                 </Grid>
             </Canvas>

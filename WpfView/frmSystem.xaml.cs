@@ -53,5 +53,12 @@ namespace WpfView
         {
             tabVagas.IsSelected = true;
         }
+
+        private void itemSair_Click(object sender, RoutedEventArgs e)
+        {
+            MainWindow frm = new MainWindow();
+            frm.Show();
+            this.Close();
+        }
     }
 }

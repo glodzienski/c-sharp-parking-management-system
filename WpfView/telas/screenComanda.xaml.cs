@@ -26,32 +26,38 @@ namespace WpfView.telas
         public screenComanda()
         {
             InitializeComponent();
-            CarregarComandas();
+            CarregarComandas(ComandaStatusEnum.Ativa);
             CarregarVagas(false);
         }
 
-        private void CarregarComandas()
-        {
-            IList<Comanda> listaComandas = comandaController.List();
+        private void CarregarComandas(int status)
+        {            
+            IList<Comanda> listaComandas = (status == 0) ? comandaController.List() : comandaController.FindByStatus(status);
             dbGridComandas.ItemsSource = listaComandas;
         }
 
-        private void CarregarVagas(bool ocupadas)
+        private void CarregarVagas(bool ocupadas, bool todas = false)
         {
-            IList<Vaga> listaVagas = vagaController.List(ocupadas);
+            IList<Vaga> listaVagas = (todas) ? vagaController.List() : vagaController.List(ocupadas);
             dbGridVagasDisponiveis.ItemsSource = listaVagas;
         }
 
         private void OnAbrirNovaComanda(object sender, RoutedEventArgs e)
         {
             Vaga vaga = ((FrameworkElement)sender).DataContext as Vaga;
-            frmComandaNova frm = new frmComandaNova(vaga);
-            frm.Closed += (s, args) =>
+            if (vaga.Ocupada)
             {
-                CarregarComandas();
-                CarregarVagas(false);
-            };
-            frm.Show();
+                Dialog.OnInforma("A vaga " + vaga.Andar + vaga.Codigo + " já está ocupada");
+            } else
+            {
+                frmComandaNova frm = new frmComandaNova(vaga);
+                frm.Closed += (s, args) =>
+                {
+                    CarregarComandas(ComandaStatusEnum.Ativa);
+                    CarregarVagas(false);
+                };
+                frm.Show();
+            }            
         }
 
         private void OnFecharComanda(object sender, RoutedEventArgs e)
@@ -71,10 +77,45 @@ namespace WpfView.telas
                 vagaController.Edit(vaga);
 
                 CarregarVagas(false);
-                CarregarComandas();
+                CarregarComandas(ComandaStatusEnum.Ativa);
 
                 Dialog.OnInforma("Comanda fechada com sucesso");
             }
+        }
+
+        private void btnTodosStatus_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarComandas(ComandaStatusEnum.Todas);
+        }
+
+        private void btnAtivas_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarComandas(ComandaStatusEnum.Ativa);
+        }
+
+        private void btnReservadas_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarComandas(ComandaStatusEnum.Reservada);
+        }
+
+        private void btnFechadas_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarComandas(ComandaStatusEnum.Fechada);
+        }
+
+        private void btnVagasTodas_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarVagas(false, true);
+        }
+
+        private void btnVagasLivres_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarVagas(false, false);
+        }
+
+        private void btnOcupadas_Click(object sender, RoutedEventArgs e)
+        {
+            CarregarVagas(true, false);
         }
     }
 }

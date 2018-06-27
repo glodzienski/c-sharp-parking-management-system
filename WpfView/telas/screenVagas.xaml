@@ -30,7 +30,7 @@
                 <DataGridTextColumn Binding="{Binding Codigo}" Header="Codigo"></DataGridTextColumn>
                 <DataGridTextColumn Binding="{Binding _VagaTipo.Descricao}" Header="Tipo"></DataGridTextColumn>
                 <DataGridCheckBoxColumn Binding="{Binding Ocupada}" Header="Ocupada"></DataGridCheckBoxColumn>
-                <DataGridCheckBoxColumn Binding="{Binding Ativa}" Header="Ativa"></DataGridCheckBoxColumn>
+                <DataGridCheckBoxColumn Binding="{Binding Ativo}" Header="Ativa"></DataGridCheckBoxColumn>
 
             </DataGrid.Columns>
         </DataGrid>

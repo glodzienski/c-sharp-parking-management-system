@@ -14,9 +14,13 @@
                         <ColumnDefinition Width="105*"/>
                         <ColumnDefinition Width="53*"/>
                         <ColumnDefinition Width="35*"/>
-                        <ColumnDefinition Width="601*"/>
+                        <ColumnDefinition Width="29*"/>
+                        <ColumnDefinition Width="572*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dbGridComandas" Margin="5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" AutoGenerateColumns="False">
+                    <DataGrid x:Name="dbGridComandas" Margin="5,35,5,5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="5" AutoGenerateColumns="False"
+                              ScrollViewer.CanContentScroll="True" 
+      ScrollViewer.VerticalScrollBarVisibility="Auto"
+      ScrollViewer.HorizontalScrollBarVisibility="Auto">
                         <DataGrid.Columns>
                             <DataGridTemplateColumn Header="Fechar">
                                 <DataGridTemplateColumn.CellTemplate>
@@ -36,7 +40,7 @@
                                     </DataTemplate>
                                 </DataGridTemplateColumn.CellTemplate>
                             </DataGridTemplateColumn>
-                            
+
                             <DataGridTextColumn Binding="{Binding _Servico.Nome}" Header="Serviço"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding _Cliente.Nome}" Header="Cliente"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding _ComandaStatus.Descricao}" Header="Status"></DataGridTextColumn>
@@ -44,6 +48,10 @@
                             <DataGridTextColumn Binding="{Binding _Funcionario.Nome}" Header="Funcionário"></DataGridTextColumn>
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button x:Name="btnTodosStatus" Content="Todas" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Click="btnTodosStatus_Click"/>
+                    <Button x:Name="btnAtivas" Content="Ativas" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="3" Click="btnAtivas_Click"/>
+                    <Button x:Name="btnFechadas" Content="Fechadas" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="4" Click="btnFechadas_Click"/>
+                    <Button x:Name="btnReservadas" Content="Reservadas" HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="3" Grid.Column="2" Click="btnReservadas_Click" RenderTransformOrigin="0.587,0.1"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabVagasDisponiveis" Header="Vagas disponiveis" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="113" Margin="-2,-2,-56,0">
@@ -54,7 +62,10 @@
                         <ColumnDefinition Width="139*"/>
                         <ColumnDefinition Width="572*"/>
                     </Grid.ColumnDefinitions>
-                    <DataGrid x:Name="dbGridVagasDisponiveis" Margin="5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" AutoGenerateColumns="False">
+                    <DataGrid x:Name="dbGridVagasDisponiveis" Margin="5,35,5,5" IsSynchronizedWithCurrentItem="False" IsReadOnly="True" HorizontalContentAlignment="Center" Grid.ColumnSpan="4" AutoGenerateColumns="False"
+                              ScrollViewer.CanContentScroll="True" 
+      ScrollViewer.VerticalScrollBarVisibility="Auto"
+      ScrollViewer.HorizontalScrollBarVisibility="Auto">
                         <DataGrid.Columns>
                             <DataGridTemplateColumn>
                                 <DataGridTemplateColumn.CellTemplate>
@@ -72,6 +83,9 @@
 
                         </DataGrid.Columns>
                     </DataGrid>
+                    <Button x:Name="btnVagasTodas" Content="Todas" HorizontalAlignment="Left" Margin="8,10,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="2" Click="btnVagasTodas_Click"/>
+                    <Button x:Name="btnVagasLivres" Content="Livres" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2" Click="btnVagasLivres_Click"/>
+                    <Button x:Name="btnOcupadas" Content="Ocupadas" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="2" Grid.ColumnSpan="2" Click="btnOcupadas_Click" ScrollViewer.CanContentScroll="True"/>
                 </Grid>
             </TabItem>
         </TabControl>
