@@ -43,6 +43,7 @@
 
                             <DataGridTextColumn Binding="{Binding _Servico.Nome}" Header="Serviço"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding _Cliente.Nome}" Header="Cliente"></DataGridTextColumn>
+                            <DataGridTextColumn Binding="{Binding _Veiculo.Placa}" Header="Veículo"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding _ComandaStatus.Descricao}" Header="Status"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding Total}" Header="Total"></DataGridTextColumn>
                             <DataGridTextColumn Binding="{Binding _Funcionario.Nome}" Header="Funcionário"></DataGridTextColumn>

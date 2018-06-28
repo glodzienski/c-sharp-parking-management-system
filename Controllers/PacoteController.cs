@@ -8,8 +8,6 @@ namespace Controllers
 {
     public class PacoteController : IBaseController<Pacote>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(Pacote obj)
         {
             Pacote pacote = FindById(obj.PacoteID);

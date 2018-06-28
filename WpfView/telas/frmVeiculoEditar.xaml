@@ -1,0 +1,27 @@
+﻿<Window
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:WpfView"
+        xmlns:telas="clr-namespace:WpfView.telas" x:Class="WpfView.frmVeiculoEditar"
+        mc:Ignorable="d"
+        Title="Editar veículo" Height="512" Width="943" WindowStartupLocation="CenterScreen" Background="#FF8B8B8B">
+    <Grid Margin="0" Grid.IsSharedSizeScope="True">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="77*"/>
+            <ColumnDefinition Width="169*"/>
+            <ColumnDefinition Width="689*"/>
+        </Grid.ColumnDefinitions>
+        <StackPanel Margin="0" Background="#FFD8D8D8" Grid.ColumnSpan="3">
+            <Grid/>
+            <Label x:Name="lblPlaca" Content="Placa *" Width="400" Height="30" Margin="0,30,0,0"/>
+            <TextBox x:Name="edtPlaca" Height="30" TextWrapping="Wrap" Width="400" HorizontalContentAlignment="Stretch" VerticalContentAlignment="Center" FontSize="14" Margin="0" AutomationProperties.IsRequiredForForm="True"/>
+            <Label x:Name="lblVeiculoTipo" Content="Tipo veículo" Width="400" Height="30" Margin="0,10,0,-2"/>
+            <ComboBox x:Name="cbVeiculoTipo" Width="400" Height="30" Panel.ZIndex="-2" SelectedValuePath="Descricao" Margin="0"/>
+            <Label x:Name="lblCliente" Content="Cliente *" Width="400" Height="30" Margin="0,10,0,0"/>
+            <ComboBox x:Name="cbCliente" Width="400" Height="30" Panel.ZIndex="-2" SelectedValuePath="Descricao" Margin="0"/>
+            <Button Content="Salvar" Margin="0,10,0,0" Width="100" Height="30" Panel.ZIndex="-3" Click="Button_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

@@ -8,8 +8,6 @@ namespace Controllers
 {
     public class ClienteController : IBaseController<Cliente>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(Cliente obj)
         {
             Cliente cliente = FindById(obj.ClienteID);

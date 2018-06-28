@@ -8,8 +8,6 @@ namespace Controllers
 {
     public class FuncionarioController : IBaseController<Funcionario>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(Funcionario obj)
         {
             Funcionario funcionario = FindById(obj.FuncionarioID);

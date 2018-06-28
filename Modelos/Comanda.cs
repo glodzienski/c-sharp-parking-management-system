@@ -31,5 +31,9 @@ namespace Models
         public int FuncionarioID { get; set; }
 
         public virtual Funcionario _Funcionario { get; set; }
+
+        public int VeiculoID { get; set; }
+
+        public virtual Veiculo _Veiculo { get; set; }
     }
 }

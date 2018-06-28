@@ -8,8 +8,6 @@ namespace Controllers
 {
     public class VeiculoTipoController : IBaseController<VeiculoTipo>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(VeiculoTipo obj)
         {
             VeiculoTipo veiculoTipo = FindById(obj.VeiculoTipoID);

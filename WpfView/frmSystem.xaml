@@ -32,6 +32,7 @@
                         <MenuItem Header="" Height="30" Width="43"/>
                         <MenuItem x:Name="itemComanda" Header="Comanda" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" RenderTransformOrigin="-1.375,0.5" Click="itemComanda_Click"/>
                         <MenuItem x:Name="itemClientes" Header="Clientes" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemClientes_Click"/>
+                        <MenuItem x:Name="itemVeiculos" Header="Veículos" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemVeiculos_Click"/>
                         <MenuItem x:Name="itemFuncionario" Header="Funcionários" Height="30" Width="102" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemFuncionario_Click"/>
                         <MenuItem x:Name="itemServicos" Header="Serviços" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemServicos_Click"/>
                         <MenuItem x:Name="itemVagas" Header="Vagas" Height="30" Width="80" Cursor="Arrow" FontWeight="Bold" Background="#FF383838" Foreground="#FFD1D1D1" Click="itemVagas_Click"/>
@@ -39,17 +40,6 @@
                     </Menu>
                 </Grid>
             </Canvas>
-        </StackPanel>
-        <StackPanel x:Name="pnlFooter" Margin="0" Background="#FF1B1B1B" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="25" VerticalAlignment="Bottom">
-            <StackPanel.RenderTransform>
-                <TransformGroup>
-                    <ScaleTransform/>
-                    <SkewTransform/>
-                    <RotateTransform/>
-                    <TranslateTransform/>
-                </TransformGroup>
-            </StackPanel.RenderTransform>
-            <TextBlock TextWrapping="Wrap" Width="466" Foreground="#FFC1C1C1" Height="25" Margin="236,0,235,0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="4,4,6,4"><Run Text="Copyright © "/><Run Text="by Glodzienski "/><Run Text="20"/><Run Text="18"/><Run Text=" "/><Run Text="- "/><Run Text="Parking System"/><Run Text=" - Todos os direitos reservados."/></TextBlock>
         </StackPanel>
         <TabControl x:Name="tabControl" Margin="5,45,5,30" BorderBrush="{x:Null}" Background="#FFE2E2E2" Focusable="False">
             <TabItem x:Name="tabClientes" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFF1F1F1" Focusable="False" IsTabStop="False" IsHitTestVisible="False">
@@ -102,6 +92,27 @@
                     <telas:screenComanda Grid.ColumnSpan="3" Margin="0,0,-50,-50"/>
                 </Grid>
             </TabItem>
+            <TabItem x:Name="tabVeiculos" Header="TabItem" HorizontalAlignment="Left" Height="20" Margin="0,0,-55,-20" VerticalAlignment="Top" Width="55" Visibility="Collapsed" BorderBrush="{x:Null}" Background="#FFE8E8E8">
+                <Grid Background="#FFE5E5E5">
+                    <Grid.ColumnDefinitions>
+                        <ColumnDefinition Width="7*"/>
+                        <ColumnDefinition Width="15"/>
+                        <ColumnDefinition Width="897*"/>
+                    </Grid.ColumnDefinitions>
+                    <telas:screenVeiculos Grid.ColumnSpan="3" Margin="5,5,0,5"/>
+                </Grid>
+            </TabItem>
         </TabControl>
+        <StackPanel x:Name="pnlFooter" Margin="0" Background="#FF1B1B1B" RenderTransformOrigin="0.5,0.5" AutomationProperties.IsOffscreenBehavior="Onscreen" Grid.IsSharedSizeScope="True" Height="25" VerticalAlignment="Bottom">
+            <StackPanel.RenderTransform>
+                <TransformGroup>
+                    <ScaleTransform/>
+                    <SkewTransform/>
+                    <RotateTransform/>
+                    <TranslateTransform/>
+                </TransformGroup>
+            </StackPanel.RenderTransform>
+            <TextBlock TextWrapping="Wrap" Width="466" Foreground="#FFC1C1C1" Height="25" Margin="236,0,235,0" HorizontalAlignment="Center" VerticalAlignment="Center" Padding="4,4,6,4"><Run Text="Copyright © "/><Run Text="by Glodzienski "/><Run Text="20"/><Run Text="18"/><Run Text=" "/><Run Text="- "/><Run Text="Parking System"/><Run Text=" - Todos os direitos reservados."/></TextBlock>
+        </StackPanel>
     </Grid>
 </Window>

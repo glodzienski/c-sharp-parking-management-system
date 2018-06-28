@@ -8,8 +8,6 @@ namespace Controllers
 {
     public class VagaTipoController : IBaseController<VagaTipo>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(VagaTipo obj)
         {
             VagaTipo vagaTipo = FindById(obj.VagaTipoID);

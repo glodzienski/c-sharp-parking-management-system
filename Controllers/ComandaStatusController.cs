@@ -8,8 +8,6 @@ namespace Controllers
 {
     public class ComandaStatusController : IBaseController<ComandaStatus>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(ComandaStatus obj)
         {
             ComandaStatus comandaStatus = FindById(obj.ComandaStatusID);

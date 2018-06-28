@@ -67,6 +67,12 @@
     <Compile Include="exemplos.xaml.cs">
       <DependentUpon>exemplos.xaml</DependentUpon>
     </Compile>
+    <Compile Include="telas\frmVeiculoEditar.xaml.cs">
+      <DependentUpon>frmVeiculoEditar.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\frmVeiculoNovo.xaml.cs">
+      <DependentUpon>frmVeiculoNovo.xaml</DependentUpon>
+    </Compile>
     <Compile Include="telas\frmServicoEditar.xaml.cs">
       <DependentUpon>frmServicoEditar.xaml</DependentUpon>
     </Compile>
@@ -93,6 +99,9 @@
     </Compile>
     <Compile Include="telas\frmClienteNovo.xaml.cs">
       <DependentUpon>frmClienteNovo.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="telas\screenVeiculos.xaml.cs">
+      <DependentUpon>screenVeiculos.xaml</DependentUpon>
     </Compile>
     <Compile Include="telas\screenComanda.xaml.cs">
       <DependentUpon>screenComanda.xaml</DependentUpon>
@@ -135,6 +144,14 @@
       <DependentUpon>MainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="telas\frmVeiculoEditar.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="telas\frmVeiculoNovo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
     <Page Include="telas\frmServicoEditar.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
@@ -168,6 +185,10 @@
       <SubType>Designer</SubType>
     </Page>
     <Page Include="telas\frmClienteNovo.xaml">
+      <Generator>MSBuild:Compile</Generator>
+      <SubType>Designer</SubType>
+    </Page>
+    <Page Include="telas\screenVeiculos.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>

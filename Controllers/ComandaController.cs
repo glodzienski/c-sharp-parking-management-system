@@ -9,8 +9,6 @@ namespace Controllers
 {
     public class ComandaController : IBaseController<Comanda>
     {
-        private Contexto contexto = new Contexto();
-
         public void Delete(Comanda obj)
         {
             Comanda comanda = FindById(obj.ComandaID);

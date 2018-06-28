@@ -60,5 +60,10 @@ namespace WpfView
             frm.Show();
             this.Close();
         }
+
+        private void itemVeiculos_Click(object sender, RoutedEventArgs e)
+        {
+            tabVeiculos.IsSelected = true;
+        }
     }
 }

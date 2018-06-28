@@ -54,6 +54,7 @@
     <Compile Include="DAL\Singleton.cs" />
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="VagaTipoController.cs" />
+    <Compile Include="VeiculoController.cs" />
     <Compile Include="VeiculoTipoController.cs" />
     <Compile Include="VagaController.cs" />
     <Compile Include="PacoteController.cs" />
