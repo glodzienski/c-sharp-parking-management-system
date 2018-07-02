@@ -51,8 +51,8 @@
                     </DataGrid>
                     <Button x:Name="btnTodosStatus" Content="Todas" HorizontalAlignment="Left" Margin="5,10,0,0" VerticalAlignment="Top" Width="75" Click="btnTodosStatus_Click"/>
                     <Button x:Name="btnAtivas" Content="Ativas" HorizontalAlignment="Left" Margin="85,10,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="3" Click="btnAtivas_Click"/>
-                    <Button x:Name="btnFechadas" Content="Fechadas" HorizontalAlignment="Left" Margin="23,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="4" Click="btnFechadas_Click"/>
-                    <Button x:Name="btnReservadas" Content="Reservadas" HorizontalAlignment="Left" Margin="7,10,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="3" Grid.Column="2" Click="btnReservadas_Click" RenderTransformOrigin="0.587,0.1"/>
+                    <Button x:Name="btnFechadas" Content="Fechadas" HorizontalAlignment="Left" Margin="30,10,0,0" VerticalAlignment="Top" Width="75" Grid.Column="4" Click="btnFechadas_Click"/>
+                    <Button x:Name="btnReservadas" Content="Reservadas" HorizontalAlignment="Left" Margin="10,10,0,0" VerticalAlignment="Top" Width="75" Grid.ColumnSpan="3" Grid.Column="2" Click="btnReservadas_Click" RenderTransformOrigin="0.587,0.1"/>
                 </Grid>
             </TabItem>
             <TabItem x:Name="tabVagasDisponiveis" Header="Vagas disponiveis" HorizontalAlignment="Left" Height="20" VerticalAlignment="Top" Width="113" Margin="-2,-2,-56,0">

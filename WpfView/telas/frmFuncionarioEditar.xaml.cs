@@ -63,7 +63,10 @@ namespace WpfView
                 this.funcionario.Nome = nome;
                 this.funcionario.Sobrenome = sobrenome;
                 this.funcionario.Email = email;
-                this.funcionario.Senha = senha;
+                if (senha != "")
+                {
+                    this.funcionario.Senha = senha;
+                }
                 this.funcionario.Ativo = ativo;
                 this.funcionario.Administrador = admin;
 
