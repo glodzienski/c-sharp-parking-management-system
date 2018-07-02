@@ -14,7 +14,11 @@ namespace StartBD
     {
         public static void Run()
         {
-            Funcionario funcionario = new Funcionario();
+            FuncionarioController controller = new FuncionarioController();
+
+            Funcionario funcionario;
+
+            funcionario = new Funcionario();
             funcionario.Administrador = true;
             funcionario.Ativo = true;
             funcionario.Cpf = "09976494963";
@@ -22,8 +26,16 @@ namespace StartBD
             funcionario.Nome = "Crystopher";
             funcionario.Sobrenome = "Glodzienski";
             funcionario.Senha = "1303";
+            controller.Store(funcionario);
 
-            FuncionarioController controller = new FuncionarioController();
+            funcionario = new Funcionario();
+            funcionario.Administrador = true;
+            funcionario.Ativo = true;
+            funcionario.Cpf = "09976494964";
+            funcionario.Email = "teste@teste.com.br";
+            funcionario.Nome = "Teste";
+            funcionario.Sobrenome = "Teste";
+            funcionario.Senha = "123";
             controller.Store(funcionario);
         }
     }

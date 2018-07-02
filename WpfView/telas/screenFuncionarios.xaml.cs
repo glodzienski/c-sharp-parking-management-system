@@ -38,8 +38,12 @@ namespace WpfView.telas
         private void OnClickExcluirFuncionario(object sender, RoutedEventArgs e)
         {
             Funcionario funcionario = ((FrameworkElement)sender).DataContext as Funcionario;
+            Funcionario funcionarioLogado = App.FuncionarioLogado;
 
-            if (Dialog.OnConfirma("Você deseja realmente excluir?", "Excluir"))
+            if(funcionarioLogado == funcionario)
+            {
+                Dialog.OnInforma("Não é possível excluir o funcionário logado.");
+            } else if (Dialog.OnConfirma("Você deseja realmente excluir?", "Excluir"))
             {
                 controller.Delete(funcionario);
                 Dialog.OnInforma("Funcionário excluído com sucesso");
