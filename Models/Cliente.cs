@@ -1,12 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class Cliente
+    [Table("Cliente")]
+    public class Cliente : Model 
     {
         public int ClienteID { get; set; }
 
@@ -16,14 +18,8 @@ namespace Modelos
 
         public string Email { get; set; }
 
-        public string Senha { get; set; }
-
         public bool Ativo { get; set; }
 
-        public int Cpf { get; set; }
-
-        public int UsuarioTipoID { get; set; }
-
-        public virtual UsuarioTipo _UsuarioTipo { get; set; }
+        public string Cpf { get; set; }
     }
 }
