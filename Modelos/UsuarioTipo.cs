@@ -1,16 +1,14 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Models
+namespace Modelos
 {
-    [Table("VagaTipo")]
-    public class VagaTipo : Model
+    class UsuarioTipo
     {
-        public int VagaTipoID { get; set; }
+        public int UsuarioTipoID { get; set; }
 
         public string Descricao { get; set; }
     }
