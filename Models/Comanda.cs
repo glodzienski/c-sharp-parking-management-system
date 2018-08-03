@@ -1,18 +1,28 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class Comanda
+    [Table("Comanda")]
+    public class Comanda : Model
     {
         public int ComandaID { get; set; }
 
-        public float Total { get; set; }
+        public double Total { get; set; }
 
         public int ComandaStatusID { get; set; }
+
+        public int ServicoID { get; set; }
+
+        public int VagaID { get; set; }
+
+        public virtual Vaga _Vaga { get; set; }
+
+        public virtual Servico _Servico { get; set; }
 
         public virtual ComandaStatus _ComandaStatus { get; set; }
 
@@ -23,5 +33,9 @@ namespace Modelos
         public int FuncionarioID { get; set; }
 
         public virtual Funcionario _Funcionario { get; set; }
+
+        public int VeiculoID { get; set; }
+
+        public virtual Veiculo _Veiculo { get; set; }
     }
 }

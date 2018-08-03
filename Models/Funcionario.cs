@@ -1,12 +1,15 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.ComponentModel;
+using System.ComponentModel.DataAnnotations.Schema;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Modelos
+namespace Models
 {
-    class Funcionario
+    [Table("Funcionario")]
+    public class Funcionario : Model
     {
         public int FuncionarioID { get; set; }
 
@@ -20,10 +23,9 @@ namespace Modelos
 
         public bool Ativo { get; set; }
 
-        public int Cpf { get; set; }
+        public string Cpf { get; set; }
 
-        public int UsuarioTipoID { get; set; }
-
-        public virtual UsuarioTipo _UsuarioTipo { get; set; }
+        [DefaultValue(false)]
+        public bool Administrador { get; set; }
     }
 }
